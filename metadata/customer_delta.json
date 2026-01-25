@@ -1,0 +1,23 @@
+{
+    "dataset_name": "customer",
+    "source":{
+        "type":"delta",
+        "path":"dbfs:/databricks-datasets/tpch/delta-001/customer"
+    },
+    "target":{
+        "zone":"replication",
+        "path":"dbfs:/replication/raw/customer"
+    },
+    "load_strategy":
+    {
+        "type":"full"
+    },
+    "primary_key":["c_custkey"],
+    "data_quality":{
+        "row_count_check":true,
+        "primary_key_check":true
+    },
+    "description":"Customer master dataset replicated as raw data for multiple business teams"
+}
+
+Add customer dataset metadata
