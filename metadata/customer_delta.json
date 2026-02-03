@@ -10,7 +10,9 @@
     },
     "load_strategy":
     {
-        "type":"full"
+        "type":"incremental",
+        "incremental_column":"c_custkey",
+        "initial_value": 0
     },
     "primary_key":["c_custkey"],
     "data_quality":{
